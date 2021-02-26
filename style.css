@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(210, 36%, 96%);
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* header */
+.header {
+  position: absolute;
+  width: 100%;
+}
+.header .row {
+  justify-content: center;
+  padding: 10px 5px;
+}
+.topnav ul {
+  margin: 0;
+  padding: 0;
+}
+.topnav ul li {
+  display: inline-block;
+}
+.topnav ul li a {
+  color: #2a2a2a;
+  font-size: 18px;
+  padding: 7px 9px;
+  display: block;
+  font-weight: 500;
+  transition: 0.5s ease all;
+}
+.topnav ul li a:hover {
+  color: hsl(205, 90%, 70%);
+}
+/* home section */
+
+.home .row {
+  padding: 40px 20px;
+  min-height: 100vh;
+  align-items: center;
+}
+.home .row .home-text,
+.home .row .home-img {
+  width: 50%;
+  padding: 15px;
+}
+.home-text h1 {
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.home-text p {
+  max-width: 500px;
+  line-height: 28px;
+}
+.home-img img {
+  width: 100%;
+  margin: 30px auto;
+  display: block;
+}
