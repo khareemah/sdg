@@ -12,7 +12,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 .container {
-  max-width: 1140px;
+  max-width: 1400px;
   margin: auto;
 }
 a {
@@ -34,12 +34,24 @@ p {
 
 /* header */
 .header {
+  /* height: 60px; */
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   border-bottom: 1px solid #c8cacc;
+  z-index: 300;
 }
 .header .row {
-  padding: 10px 5px;
+  align-items: center;
+}
+.header span {
+  cursor: pointer;
+  display: none;
+}
+.header .nav-toggle i {
+  font-size: 30px;
+  padding: 17px 20px;
 }
 .topnav ul {
   margin: 0;
@@ -51,7 +63,7 @@ p {
 .topnav ul li a {
   color: #2a2a2a;
   font-size: 18px;
-  padding: 7px 15px;
+  padding: 17px 20px;
   display: block;
   font-weight: 500;
   transition: 0.5s ease all;
@@ -65,11 +77,11 @@ p {
 .home .row {
   min-height: 100vh;
   align-items: center;
+  padding: 70px 30px 30px;
 }
 .home .row .home-text,
 .home .row .home-img {
   width: 50%;
-  padding: 15px 30px 30px;
 }
 .home-text h1 {
   font-size: 60px;
@@ -81,11 +93,10 @@ p {
 }
 .home-img img {
   width: 100%;
-  margin: 30px auto;
   display: block;
 }
 .home .links-container {
-  margin-top: 50px;
+  margin: 50px 0;
 }
 .links-container a {
   background-color: hsl(234, 96%, 69%);
@@ -104,4 +115,46 @@ p {
 .about {
   padding: 0 30px 30px;
 }
+.about p {
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
 /* about section ends */
+
+/* responsiveness */
+@media (max-width: 767px) {
+  .header {
+    background-color: white;
+  }
+  .header .row {
+    justify-content: flex-end;
+  }
+  .header .nav-toggle span {
+    display: flex;
+  }
+  .header .nav-toggle i {
+    padding: 7px 12px;
+  }
+  .topnav {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease all;
+  }
+  .topnav.open {
+    height: 206px;
+  }
+  .topnav ul li {
+    display: block;
+  }
+  .topnav ul li a {
+    padding: 7px 12px;
+  }
+  .home .row .home-text,
+  .home .row .home-img {
+    width: 100%;
+  }
+  .home .row .home-text h1 {
+    font-size: 40px;
+  }
+}
