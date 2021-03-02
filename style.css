@@ -97,6 +97,8 @@ p {
 }
 .home .links-container {
   margin: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 .links-container a {
   background-color: hsl(234, 96%, 69%);
@@ -104,6 +106,7 @@ p {
   text-transform: capitalize;
   padding: 8px 15px;
   margin-right: 8px;
+  margin-bottom: 20px;
   transition: 0.3s ease all;
 }
 .links-container a:hover {
@@ -153,6 +156,10 @@ p {
   .home .row .home-text,
   .home .row .home-img {
     width: 100%;
+  }
+  .home .row .home-img img {
+    width: 80%;
+    margin-left: 0;
   }
   .home .row .home-text h1 {
     font-size: 40px;
