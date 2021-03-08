@@ -146,17 +146,14 @@ section.faqs {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   position: relative;
-  background-image: url(./bg-pattern-desktop.svg);
-  background-repeat: no-repeat;
-  background-size: 300px;
-  background-position: -10% 80%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 20px 0;
 }
 .box-desktop,
-.woman-desktop {
+.woman-desktop,
+.bg-desktop {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -166,7 +163,9 @@ section.faqs {
   width: 100px;
   z-index: 3;
 }
-.woman-desktop {
+
+.woman-desktop,
+.bg-desktop {
   left: 80px;
   width: 300px;
   z-index: 2;
@@ -211,7 +210,8 @@ section.faqs {
 /* faqs section end */
 /* responsiveness */
 @media (max-width: 1040px) {
-  .woman-desktop {
+  .woman-desktop,
+  .bg-desktop {
     width: 200px;
     left: 40px;
   }
@@ -233,7 +233,7 @@ section.faqs {
     transition: 0.5s ease all;
   }
   .topnav.open {
-    height: 206px;
+    height: 260px;
   }
   .topnav ul li {
     display: block;
@@ -256,7 +256,8 @@ section.faqs {
     font-size: 35px;
   }
   .box-desktop,
-  .woman-desktop {
+  .woman-desktop,
+  .bg-desktop {
     top: 0px;
     left: 50%;
   }
@@ -268,7 +269,6 @@ section.faqs {
   .faqs article > div {
     padding-top: 100px;
     background-position: 50% -50%;
-    background-size: 50% 50%;
   }
   .questions {
     padding: 10px;
