@@ -262,12 +262,15 @@ section.faqs {
   }
 
   .faqs article {
-    padding: 150px 15px 60px;
+    padding: 150px 0px 60px;
     margin: 50px 0 auto;
   }
   .faqs article > div {
     padding-top: 100px;
     background-position: 50% -50%;
     background-size: 50% 50%;
+  }
+  .questions {
+    padding: 10px;
   }
 }
