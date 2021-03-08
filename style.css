@@ -26,6 +26,7 @@ p {
   font-size: 45px;
   text-align: center;
   margin-bottom: 20px;
+  text-transform: capitalize;
 }
 .row {
   display: flex;
@@ -34,13 +35,17 @@ p {
 
 /* header */
 .header {
-  /* height: 60px; */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   border-bottom: 1px solid #c8cacc;
+  background-color: white;
   z-index: 300;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.header.fixed {
+  position: fixed;
 }
 .header .row {
   align-items: center;
@@ -77,7 +82,7 @@ p {
 .home .row {
   min-height: 100vh;
   align-items: center;
-  padding: 70px 30px 30px;
+  padding: 70px 20px 40px;
 }
 .home .row .home-text,
 .home .row .home-img {
@@ -116,7 +121,7 @@ p {
 
 /* about section starts */
 .about {
-  padding: 0 30px 30px;
+  padding: 0 20px 40px;
 }
 .about p {
   margin-bottom: 30px;
@@ -124,11 +129,94 @@ p {
 }
 /* about section ends */
 
+/* faqs section starts */
+section.faqs {
+  padding: 0 20px 40px;
+}
+.faqs article {
+  margin: 50px 50px auto;
+  padding: 50px 40px;
+  background: linear-gradient(to left, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+.faqs article > div {
+  background-color: white;
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  position: relative;
+  background-image: url(./bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: -10% 80%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px 0;
+}
+.box-desktop,
+.woman-desktop {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.box-desktop {
+  left: 0px;
+  width: 100px;
+  z-index: 3;
+}
+.woman-desktop {
+  left: 80px;
+  width: 300px;
+  z-index: 2;
+}
+.questions {
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+.question-card {
+  margin-bottom: 30px;
+}
+.question-card p {
+  font-size: 14px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.question-btn {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 14px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  outline: none;
+  margin-bottom: 10px;
+}
+.question-card .question-btn::before {
+  content: url(./icon-arrow-down.svg);
+  font-size: 13px;
+  color: inherit;
+  position: absolute;
+  width: 20px;
+  right: 20px;
+}
+/* faqs section end */
 /* responsiveness */
-@media (max-width: 767px) {
-  .header {
-    background-color: white;
+@media (max-width: 1040px) {
+  .woman-desktop {
+    width: 200px;
+    left: 40px;
   }
+}
+@media (max-width: 767px) {
   .header .row {
     justify-content: flex-end;
   }
@@ -151,7 +239,7 @@ p {
     display: block;
   }
   .topnav ul li a {
-    padding: 7px 12px;
+    padding: 12px;
   }
   .home .row .home-text,
   .home .row .home-img {
@@ -162,6 +250,23 @@ p {
     margin-left: 0;
   }
   .home .row .home-text h1 {
-    font-size: 40px;
+    font-size: 45px;
+  }
+  .section-title h2 {
+    font-size: 35px;
+  }
+  .box-desktop,
+  .woman-desktop {
+    top: 0px;
+    left: 50%;
+  }
+
+  .faqs article {
+    padding: 150px 40px 60px;
+  }
+  .faqs article > div {
+    padding-top: 100px;
+    background-position: 50% -50%;
+    background-size: 50% 50%;
   }
 }
