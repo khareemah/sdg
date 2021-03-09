@@ -1,18 +1,17 @@
 // nav toggle
 const navToggle = document.querySelector(".nav-toggle span");
 const topNav = document.querySelector(".header .topnav");
+const navLinks = topNav.querySelectorAll("ul li");
+
 navToggle.addEventListener("click", function() {
   topNav.classList.toggle("open");
 });
 
-// fixed navbar
-const header = document.querySelector(".header");
-window.addEventListener("scroll", function() {
-  if (window.pageYOffset > 200) {
-    header.classList.add("fixed");
-  } else {
-    header.classList.remove("fixed");
-  }
+// close navbar when link is clicked on mobile
+navLinks.forEach(navLink => {
+  navLink.addEventListener("click", function() {
+    topNav.classList.remove("open");
+  });
 });
 
 // faq
