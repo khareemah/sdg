@@ -35,7 +35,7 @@ p {
 
 /* header */
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -78,7 +78,7 @@ p {
 .home .row {
   min-height: 100vh;
   align-items: center;
-  padding: 70px 20px 40px;
+  padding: 70px 20px 0px;
 }
 .home .row .home-text,
 .home .row .home-img {
@@ -115,9 +115,19 @@ p {
 }
 /* home section ends */
 
+/* our mission starts */
+.our-mission {
+  padding: 40px 20px 0px;
+}
+.our-mission p {
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+/* our mission ends */
+
 /* about section starts */
 .about {
-  padding: 0 20px 40px;
+  padding: 40px 20px 0px;
 }
 .about p {
   margin-bottom: 30px;
@@ -125,9 +135,41 @@ p {
 }
 /* about section ends */
 
+/* contact section starts */
+.contact {
+  padding: 40px 20px 0px;
+}
+.contact article {
+  width: 25%;
+  text-align: center;
+  padding: 0 15px;
+}
+.contact article .inner {
+  padding: 20px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+}
+.contact article .inner a i {
+  margin-bottom: 10px;
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  border-radius: 50%;
+  color: white;
+  background-color: hsl(234, 96%, 69%);
+  transition: 0.3s ease all;
+  border: 1px solid hsl(234, 90%, 69%);
+}
+.contact article .inner a i:hover {
+  color: hsl(234, 90%, 69%);
+  background-color: white;
+}
+/* contact section ends */
 /* faqs section starts */
 section.faqs {
-  padding: 0 20px 40px;
+  padding: 40px 20px 0px;
 }
 .faqs article {
   margin: 50px 50px auto;
@@ -181,6 +223,16 @@ section.faqs {
   right: 0px;
 }
 /* faqs section end */
+
+/* footer */
+footer p {
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
 /* responsiveness */
 @media (max-width: 767px) {
   .header .row {
@@ -198,9 +250,7 @@ section.faqs {
     overflow: hidden;
     transition: 0.5s ease all;
   }
-  .topnav.open {
-    height: 260px;
-  }
+
   .topnav ul li {
     display: block;
   }
@@ -218,15 +268,26 @@ section.faqs {
   .home .row .home-text h1 {
     font-size: 45px;
   }
-  .section-title h2 {
+  .section-title {
     font-size: 35px;
   }
   .faqs article {
     margin: 50px 0 auto;
     padding: 20px 10px;
   }
-
-  /* .questions {
-    padding: 10px;
-  } */
+  .contact article {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 375px) {
+  .contact article {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 767px) {
+  .topnav {
+    height: auto !important;
+  }
 }
